@@ -38,6 +38,7 @@ export default function ContactUs() {
       }
     } catch (err) {
       alert('Something went wrong. Try again later.');
+      console.error('Error sending message:', err);
     } finally {
       setLoading(false);
     }

@@ -1,9 +1,9 @@
-import Image from "next/image";
+
 import { Herosection } from "@/components/herosection";
 import { HeadSection } from "@/components/headsection";
 import { CardHover } from "@/components/hover";
 import { MovingCards } from "@/components/movingCard";
-import BotpressChat from "@/components/BotpressChat";
+
 
 export default function Home() {
   return (
