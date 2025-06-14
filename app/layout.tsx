@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NavbarDemo } from "@/components/navbar";
+import Footer from "@/components/footer";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import BotpressChat from "@/components/BotpressChat";
+// TODO: Uncomment and fix the import path below if the file exists elsewhere
+// import { BackgroundBeamsWithCollision } from "@/components/background-beams";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +30,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <NavbarDemo />
+        {/* <div className="flex flex-col items-center justify-center min-h-screen"> */}
         {children}
+        {/* < BackgroundBeamsWithCollision children={undefined} /> */}
+         <BotpressChat />
+        <Footer />
       </body>
     </html>
   );
