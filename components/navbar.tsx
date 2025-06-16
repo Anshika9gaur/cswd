@@ -24,9 +24,7 @@ export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div
-      className="relative w-full bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
-    >
+    <div className="relative w-full bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
