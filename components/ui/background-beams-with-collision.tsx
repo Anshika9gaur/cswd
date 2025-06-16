@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "../lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useRef, useState, useEffect } from "react";
@@ -34,13 +35,14 @@ export const BackgroundBeamsWithCollision = ({
       {beams.map((beam, i) => (
         <CollisionMechanism
           key={`beam-${i}`}
-          beamOptions={beam}
           containerRef={containerRef}
           parentRef={parentRef}
+          beamOptions={beam}
         />
       ))}
 
       {children}
+
       <div
         ref={containerRef}
         className="absolute bottom-0 bg-neutral-100 w-full inset-x-0 pointer-events-none"
@@ -70,7 +72,7 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
->(({ containerRef, parentRef, beamOptions = {} }, ref) => {
+>(({ containerRef, parentRef, beamOptions = {} }, _ref) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;
