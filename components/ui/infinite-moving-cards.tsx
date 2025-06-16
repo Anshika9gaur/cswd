@@ -23,43 +23,44 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
   const [start, setStart] = useState(false);
 
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      getDirection();
-      getSpeed();
-      setStart(true);
+  useEffect(() => {
+    function getDirection() {
+      if (containerRef.current) {
+        containerRef.current.style.setProperty(
+          "--animation-direction",
+          direction === "left" ? "forwards" : "reverse"
+        );
+      }
     }
-  }
 
-  const getDirection = () => {
-    if (containerRef.current) {
-      containerRef.current.style.setProperty(
-        "--animation-direction",
-        direction === "left" ? "forwards" : "reverse"
-      );
+    function getSpeed() {
+      if (containerRef.current) {
+        const duration =
+          speed === "fast" ? "10s" : speed === "normal" ? "40s" : "80s";
+        containerRef.current.style.setProperty("--animation-duration", duration);
+      }
     }
-  };
 
-  const getSpeed = () => {
-    if (containerRef.current) {
-      const duration =
-        speed === "fast" ? "10s" : speed === "normal" ? "40s" : "80s";
-      containerRef.current.style.setProperty("--animation-duration", duration);
+    function addAnimation() {
+      if (containerRef.current && scrollerRef.current) {
+        const scrollerContent = Array.from(scrollerRef.current.children);
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          if (scrollerRef.current) {
+            scrollerRef.current.appendChild(duplicatedItem);
+          }
+        });
+
+        getDirection();
+        getSpeed();
+        setStart(true);
+      }
     }
-  };
+
+    addAnimation();
+  }, [direction, speed]);
 
   return (
     <div

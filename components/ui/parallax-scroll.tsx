@@ -1,6 +1,8 @@
 "use client";
-import { useScroll, useTransform, motion } from "motion/react";
+import { useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { motion } from "motion/react";
+
 import { cn } from "../lib/utils";
 
 export const ParallaxScroll = ({
@@ -10,39 +12,72 @@ export const ParallaxScroll = ({
   images: string[];
   className?: string;
 }) => {
-  const containerRef = useRef(null);
-
+  const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    container: containerRef,
+    container: gridRef,
     offset: ["start start", "end start"],
   });
 
+  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
+
+  const third = Math.ceil(images.length / 3);
+
+  const firstPart = images.slice(0, third);
+  const secondPart = images.slice(third, 2 * third);
+  const thirdPart = images.slice(2 * third);
+
   return (
     <div
-      ref={containerRef}
       className={cn(
-        "h-[40rem] bg-gradient-to-r from-black to-gray-900 overflow-y-auto w-full",
+        "h-[40rem] items-start overflow-y-auto w-full bg-gradient-to-r from-black to-gray-900",
         className
       )}
+      ref={gridRef}
     >
-      <h2 className="text-2xl mt-4 text-center text-white font-bold">Gallery</h2>
-
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto py-10 px-6">
-        {images.map((image, index) => {
-          // Create a different parallax speed for each image
-          const offsetAmount = (index % 5) * 40 - 80; // varies between -80 to +80
-          const translateY = useTransform(scrollYProgress, [0, 1], [0, offsetAmount]);
-
-          return (
-            <motion.div key={index} style={{ y: translateY }}>
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
+      >
+        <div className="grid gap-10">
+          {firstPart.map((el, idx) => (
+            <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
               <img
-                src={image}
-                alt={`Image ${index + 1}`}
-                className="h-64 w-full object-cover rounded-lg shadow-lg"
+                src={el}
+                className="h-80 w-full object-cover object-left-top rounded-lg"
+                height="400"
+                width="400"
+                alt="thumbnail"
               />
             </motion.div>
-          );
-        })}
+          ))}
+        </div>
+        <div className="grid gap-10">
+          {secondPart.map((el, idx) => (
+            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+              <img
+                src={el}
+                className="h-80 w-full object-cover object-left-top rounded-lg"
+                height="400"
+                width="400"
+                alt="thumbnail"
+              />
+            </motion.div>
+          ))}
+        </div>
+        <div className="grid gap-10">
+          {thirdPart.map((el, idx) => (
+            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+              <img
+                src={el}
+                className="h-80 w-full object-cover object-left-top rounded-lg"
+                height="400"
+                width="400"
+                alt="thumbnail"
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
