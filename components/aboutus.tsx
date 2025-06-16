@@ -1,6 +1,7 @@
 import React from "react";
 import { Meteors } from "./ui/meteors";
 
+
 export function MeteorsDemo() {
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -36,11 +37,7 @@ export function MeteorsDemo() {
             a strong bridge between academia and the professional world.
           </p>
 
-          <a href="/">
-            <button className="rounded-lg border border-gray-500 px-4 py-1 text-gray-300">
-              Explore
-            </button>
-          </a>
+          
           {/* Meaty part - Meteor effect */}
           <Meteors number={20} />
         </div>
