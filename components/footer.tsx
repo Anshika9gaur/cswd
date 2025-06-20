@@ -26,8 +26,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row gap-10 text-center md:text-left">
           <div>
             <h3 className="text-lg font-bold text-blue-300 mb-2">CONTACT US:</h3>
-            <p>naitik.kumar.2023@miet.ac.in</p>
-            <p>cswd.community@miet.ac.in</p>
+            <p>naitik.kumar.cse.2023@miet.ac.in</p>
+            <p>cswdmiet.society@gmail.com</p>
           </div>
           <div>
             <h3 className="text-lg font-bold text-blue-300 mb-2">VISIT US AT:</h3>
@@ -64,7 +64,7 @@ export default function Footer() {
             <i className="fab fa-whatsapp"></i>
           </Link>
           <Link href="#" aria-label="Teams" className="hover:text-blue-500">
-            <i className="fab fa-microsoft"></i>
+            <i className="fab fa-twitter"></i>
           </Link>
         </div>
       </div>

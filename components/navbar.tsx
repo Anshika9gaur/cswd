@@ -28,14 +28,14 @@ export function NavbarDemo() {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
-          <Image src="/logo.png" alt="Logo" width={70} height={70} />
+          <Image src="/logo.png" alt="Logo" width={50} height={50} />
           <NavItems items={navItems} />
         </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <Image src="/logo.png" alt="Logo" width={100} height={100} />
+            <Image src="/logo.png" alt="Logo" width={50} height={50} />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
