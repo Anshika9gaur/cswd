@@ -12,6 +12,7 @@
     "@botpress/webchat": "^2.6.2",
     "@tabler/icons-react": "^3.33.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.18.1",
     "motion": "^12.15.0",
     "next": "15.3.2",
     "nodemailer": "^7.0.3",

@@ -28,7 +28,7 @@ export function NavbarDemo() {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/logo.png" alt="Logo" width={70} height={70} />
           <NavItems items={navItems} />
         </NavBody>
 
