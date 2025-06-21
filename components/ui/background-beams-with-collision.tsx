@@ -75,25 +75,23 @@ const CollisionMechanism = ({
   };
 }) => {
   const beamRef = useRef<HTMLDivElement>(null);
-  const [collision, setCollision] = useState<{
-    detected: boolean;
-    coordinates: { x: number; y: number } | null;
-  }>({ detected: false, coordinates: null });
-
+  const [collision, setCollision] = useState({
+    detected: false,
+    coordinates: null as { x: number; y: number } | null,
+  });
   const [beamKey, setBeamKey] = useState(0);
   const [cycleCollisionDetected, setCycleCollisionDetected] = useState(false);
 
   useEffect(() => {
     const checkCollision = () => {
-      if (
-        beamRef.current &&
-        containerRef.current &&
-        parentRef.current &&
-        !cycleCollisionDetected
-      ) {
-        const beamRect = beamRef.current.getBoundingClientRect();
-        const containerRect = containerRef.current.getBoundingClientRect();
-        const parentRect = parentRef.current.getBoundingClientRect();
+      const beam = beamRef.current;
+      const container = containerRef.current;
+      const parent = parentRef.current;
+
+      if (beam && container && parent && !cycleCollisionDetected) {
+        const beamRect = beam.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const parentRect = parent.getBoundingClientRect();
 
         if (beamRect.bottom >= containerRect.top) {
           const relativeX = beamRect.left - parentRect.left + beamRect.width / 2;
@@ -103,29 +101,30 @@ const CollisionMechanism = ({
             detected: true,
             coordinates: { x: relativeX, y: relativeY },
           });
+
           setCycleCollisionDetected(true);
         }
       }
     };
 
-    const interval = setInterval(checkCollision, 50);
-    return () => clearInterval(interval);
+    const animationInterval = setInterval(checkCollision, 50);
+    return () => clearInterval(animationInterval);
   }, [containerRef, parentRef, cycleCollisionDetected]);
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
-      const reset = setTimeout(() => {
+      const resetTimeout = setTimeout(() => {
         setCollision({ detected: false, coordinates: null });
         setCycleCollisionDetected(false);
       }, 2000);
 
-      const keyUpdate = setTimeout(() => {
-        setBeamKey((prev) => prev + 1);
+      const keyTimeout = setTimeout(() => {
+        setBeamKey((prevKey) => prevKey + 1);
       }, 2000);
 
       return () => {
-        clearTimeout(reset);
-        clearTimeout(keyUpdate);
+        clearTimeout(resetTimeout);
+        clearTimeout(keyTimeout);
       };
     }
   }, [collision]);
