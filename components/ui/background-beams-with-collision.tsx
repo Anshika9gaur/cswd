@@ -72,7 +72,7 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
->(({ containerRef, parentRef, beamOptions = {} }, _ref) => {
+>(({ containerRef, parentRef, beamOptions = {} }) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;
@@ -95,12 +95,16 @@ const CollisionMechanism = React.forwardRef<
         const parentRect = parentRef.current.getBoundingClientRect();
 
         if (beamRect.bottom >= containerRect.top) {
-          const relativeX = beamRect.left - parentRect.left + beamRect.width / 2;
+          const relativeX =
+            beamRect.left - parentRect.left + beamRect.width / 2;
           const relativeY = beamRect.bottom - parentRect.top;
 
           setCollision({
             detected: true,
-            coordinates: { x: relativeX, y: relativeY },
+            coordinates: {
+              x: relativeX,
+              y: relativeY,
+            },
           });
           setCycleCollisionDetected(true);
         }
@@ -109,7 +113,7 @@ const CollisionMechanism = React.forwardRef<
 
     const animationInterval = setInterval(checkCollision, 50);
     return () => clearInterval(animationInterval);
-  }, [cycleCollisionDetected, containerRef, parentRef]);
+  }, [cycleCollisionDetected]);
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
@@ -134,15 +138,18 @@ const CollisionMechanism = React.forwardRef<
       <motion.div
         key={beamKey}
         ref={beamRef}
+        animate="animate"
         initial={{
-          y: beamOptions.initialY ?? -200,
-          x: beamOptions.initialX ?? 0,
-          rotate: beamOptions.rotate ?? 0,
+          y: beamOptions.initialY || -200,
+          x: beamOptions.initialX || 0,
+          rotate: beamOptions.rotate || 0,
         }}
-        animate={{
-          y: beamOptions.translateY ?? 1800,
-          x: beamOptions.translateX ?? 0,
-          rotate: beamOptions.rotate ?? 0,
+        variants={{
+          animate: {
+            y: beamOptions.translateY || 1800,
+            x: beamOptions.translateX || 0,
+            rotate: beamOptions.rotate || 0,
+          },
         }}
         transition={{
           duration: beamOptions.duration || 8,
