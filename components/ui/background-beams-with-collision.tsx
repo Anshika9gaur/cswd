@@ -50,7 +50,7 @@ export const BackgroundBeamsWithCollision = ({
           boxShadow:
             "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
         }}
-      ></div>
+      />
     </div>
   );
 };
@@ -60,8 +60,8 @@ const CollisionMechanism = ({
   parentRef,
   beamOptions = {},
 }: {
-  containerRef: React.RefObject<HTMLDivElement>;
-  parentRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
+  parentRef: React.RefObject<HTMLDivElement | null>;
   beamOptions?: {
     initialX?: number;
     translateX?: number;
@@ -75,10 +75,10 @@ const CollisionMechanism = ({
   };
 }) => {
   const beamRef = useRef<HTMLDivElement>(null);
-  const [collision, setCollision] = useState<{
-    detected: boolean;
-    coordinates: { x: number; y: number } | null;
-  }>({ detected: false, coordinates: null });
+  const [collision, setCollision] = useState({
+    detected: false,
+    coordinates: null as { x: number; y: number } | null,
+  });
 
   const [beamKey, setBeamKey] = useState(0);
   const [cycleCollisionDetected, setCycleCollisionDetected] = useState(false);
@@ -96,20 +96,25 @@ const CollisionMechanism = ({
         const parentRect = parentRef.current.getBoundingClientRect();
 
         if (beamRect.bottom >= containerRect.top) {
-          const relativeX = beamRect.left - parentRect.left + beamRect.width / 2;
-          const relativeY = beamRect.bottom - parentRect.top;
+          const relativeX =
+            beamRect.left - parentRect.left + beamRect.width / 2;
+          const relativeY = beamRect.bottom - parentRef.current.getBoundingClientRect().top;
 
           setCollision({
             detected: true,
-            coordinates: { x: relativeX, y: relativeY },
+            coordinates: {
+              x: relativeX,
+              y: relativeY,
+            },
           });
           setCycleCollisionDetected(true);
         }
       }
     };
 
-    const interval = setInterval(checkCollision, 50);
-    return () => clearInterval(interval);
+    const animationInterval = setInterval(checkCollision, 50);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => clearInterval(animationInterval);
   }, [cycleCollisionDetected]);
 
   useEffect(() => {
