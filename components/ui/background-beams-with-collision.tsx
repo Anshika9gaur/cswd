@@ -11,8 +11,8 @@ export const BackgroundBeamsWithCollision = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null); // ✅ fixed typing
-  const parentRef = useRef<HTMLDivElement>(null);    // ✅ fixed typing
+  const containerRef = useRef<HTMLDivElement>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
 
   const beams = [
     { initialX: 10, translateX: 10, duration: 7, repeatDelay: 3, delay: 2 },
@@ -35,9 +35,9 @@ export const BackgroundBeamsWithCollision = ({
       {beams.map((beam, i) => (
         <CollisionMechanism
           key={`beam-${i}`}
+          beamOptions={beam}
           containerRef={containerRef}
           parentRef={parentRef}
-          beamOptions={beam}
         />
       ))}
 
@@ -75,23 +75,25 @@ const CollisionMechanism = ({
   };
 }) => {
   const beamRef = useRef<HTMLDivElement>(null);
-  const [collision, setCollision] = useState({
-    detected: false,
-    coordinates: null as { x: number; y: number } | null,
-  });
+  const [collision, setCollision] = useState<{
+    detected: boolean;
+    coordinates: { x: number; y: number } | null;
+  }>({ detected: false, coordinates: null });
+
   const [beamKey, setBeamKey] = useState(0);
   const [cycleCollisionDetected, setCycleCollisionDetected] = useState(false);
 
   useEffect(() => {
     const checkCollision = () => {
-      const beam = beamRef.current;
-      const container = containerRef.current;
-      const parent = parentRef.current;
-
-      if (beam && container && parent && !cycleCollisionDetected) {
-        const beamRect = beam.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
-        const parentRect = parent.getBoundingClientRect();
+      if (
+        beamRef.current &&
+        containerRef.current &&
+        parentRef.current &&
+        !cycleCollisionDetected
+      ) {
+        const beamRect = beamRef.current.getBoundingClientRect();
+        const containerRect = containerRef.current.getBoundingClientRect();
+        const parentRect = parentRef.current.getBoundingClientRect();
 
         if (beamRect.bottom >= containerRect.top) {
           const relativeX = beamRect.left - parentRect.left + beamRect.width / 2;
@@ -101,7 +103,6 @@ const CollisionMechanism = ({
             detected: true,
             coordinates: { x: relativeX, y: relativeY },
           });
-
           setCycleCollisionDetected(true);
         }
       }
@@ -118,13 +119,13 @@ const CollisionMechanism = ({
         setCycleCollisionDetected(false);
       }, 2000);
 
-      const updateKey = setTimeout(() => {
+      const keyUpdate = setTimeout(() => {
         setBeamKey((prev) => prev + 1);
       }, 2000);
 
       return () => {
         clearTimeout(reset);
-        clearTimeout(updateKey);
+        clearTimeout(keyUpdate);
       };
     }
   }, [collision]);
