@@ -55,27 +55,26 @@ export const BackgroundBeamsWithCollision = ({
   );
 };
 
-const CollisionMechanism = React.forwardRef<
-  HTMLDivElement,
-  {
-    containerRef: React.RefObject<HTMLDivElement>;
-    parentRef: React.RefObject<HTMLDivElement>;
-    beamOptions?: {
-      initialX?: number;
-      translateX?: number;
-      initialY?: number;
-      translateY?: number;
-      rotate?: number;
-      className?: string;
-      duration?: number;
-      delay?: number;
-      repeatDelay?: number;
-    };
-  }
->((props, ref) => {
-  const { containerRef, parentRef, beamOptions = {} } = props;
+const CollisionMechanism = ({
+  containerRef,
+  parentRef,
+  beamOptions = {},
+}: {
+  containerRef: React.RefObject<HTMLDivElement>;
+  parentRef: React.RefObject<HTMLDivElement>;
+  beamOptions?: {
+    initialX?: number;
+    translateX?: number;
+    initialY?: number;
+    translateY?: number;
+    rotate?: number;
+    className?: string;
+    duration?: number;
+    delay?: number;
+    repeatDelay?: number;
+  };
+}) => {
   const beamRef = useRef<HTMLDivElement>(null);
-
   const [collision, setCollision] = useState({
     detected: false,
     coordinates: null as { x: number; y: number } | null,
@@ -108,24 +107,24 @@ const CollisionMechanism = React.forwardRef<
       }
     };
 
-    const animationInterval = setInterval(checkCollision, 50);
-    return () => clearInterval(animationInterval);
+    const interval = setInterval(checkCollision, 50);
+    return () => clearInterval(interval);
   }, [containerRef, parentRef, cycleCollisionDetected]);
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
-      const resetTimeout = setTimeout(() => {
+      const reset = setTimeout(() => {
         setCollision({ detected: false, coordinates: null });
         setCycleCollisionDetected(false);
       }, 2000);
 
-      const keyTimeout = setTimeout(() => {
-        setBeamKey((prevKey) => prevKey + 1);
+      const updateKey = setTimeout(() => {
+        setBeamKey((prev) => prev + 1);
       }, 2000);
 
       return () => {
-        clearTimeout(resetTimeout);
-        clearTimeout(keyTimeout);
+        clearTimeout(reset);
+        clearTimeout(updateKey);
       };
     }
   }, [collision]);
@@ -137,24 +136,24 @@ const CollisionMechanism = React.forwardRef<
         ref={beamRef}
         animate="animate"
         initial={{
-          y: beamOptions.initialY || -200,
-          x: beamOptions.initialX || 0,
-          rotate: beamOptions.rotate || 0,
+          y: beamOptions.initialY ?? -200,
+          x: beamOptions.initialX ?? 0,
+          rotate: beamOptions.rotate ?? 0,
         }}
         variants={{
           animate: {
-            y: beamOptions.translateY || 1800,
-            x: beamOptions.translateX || 0,
-            rotate: beamOptions.rotate || 0,
+            y: beamOptions.translateY ?? 1800,
+            x: beamOptions.translateX ?? 0,
+            rotate: beamOptions.rotate ?? 0,
           },
         }}
         transition={{
-          duration: beamOptions.duration || 8,
+          duration: beamOptions.duration ?? 8,
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
-          delay: beamOptions.delay || 0,
-          repeatDelay: beamOptions.repeatDelay || 0,
+          delay: beamOptions.delay ?? 0,
+          repeatDelay: beamOptions.repeatDelay ?? 0,
         }}
         className={cn(
           "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent",
@@ -175,8 +174,7 @@ const CollisionMechanism = React.forwardRef<
       </AnimatePresence>
     </>
   );
-});
-CollisionMechanism.displayName = "CollisionMechanism";
+};
 
 const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
   const spans = Array.from({ length: 20 }, (_, index) => ({
