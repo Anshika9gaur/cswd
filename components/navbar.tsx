@@ -45,15 +45,16 @@ export function NavbarDemo() {
           <MobileNavMenu
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
+            className="bg-black text-white px-4 py-6"
           >
             {navItems.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-white"
+                className="block text-lg py-3 border-b border-white"
               >
-                <span className="block">{item.name}</span>
+                {item.name}
               </a>
             ))}
           </MobileNavMenu>
