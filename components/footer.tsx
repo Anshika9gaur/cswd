@@ -63,7 +63,7 @@ export default function Footer() {
           <Link href="https://chat.whatsapp.com/IFG0duEFvtg2GItmSwy6zm" target='_blank' aria-label="WhatsApp" className="hover:text-green-400">
             <i className="fab fa-whatsapp"></i>
           </Link>
-          <Link href="#" aria-label="Teams" className="hover:text-blue-500">
+          <Link href="https://x.com/CSWDMIET?t=d8O6AHJE1oGq42aD-Y9g1A&s=09" aria-label="Teams" className="hover:text-blue-500">
             <i className="fab fa-twitter"></i>
           </Link>
         </div>
