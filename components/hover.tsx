@@ -8,9 +8,9 @@ export function CardHover() {
       className="max-w-5xl mx-auto px-8 bg-gradient-to-r from-black to-gray-900 border-t border-gray-700 "
       
     >
-      <h2 className="text-4xl text-center py-4 font-bold text-white">
+      {/* <h2 className="text-4xl text-center py-4 font-bold text-white">
         About Us
-      </h2>
+      </h2> */}
 
       <HoverEffect items={projects} />
       {/* <div className="flex justify-center mt-2">
