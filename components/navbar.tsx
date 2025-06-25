@@ -10,8 +10,11 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function NavbarDemo() {
+  const pathname = usePathname(); // ✅ get current path
+
   const navItems = [
     { name: "Home", link: "/" },
     { name: "Team", link: "/team" },
@@ -29,7 +32,10 @@ export function NavbarDemo() {
         {/* Desktop Navigation */}
         <NavBody>
           <Image src="/logo.png" alt="Logo" width={70} height={70} />
-          <NavItems items={navItems} />
+          <NavItems
+            items={navItems}
+            onItemClick={() => setIsMobileMenuOpen(false)}
+          />
         </NavBody>
 
         {/* Mobile Navigation */}
@@ -52,7 +58,11 @@ export function NavbarDemo() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-lg py-3 border-b border-white"
+                className={`block text-lg py-3 border-b ${
+                  pathname === item.link
+                    ? "text-blue-400 font-semibold"
+                    : "text-white"
+                }`}
               >
                 {item.name}
               </a>

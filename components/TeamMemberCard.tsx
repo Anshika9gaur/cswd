@@ -8,14 +8,14 @@ interface Props {
 
 export const TeamMemberCard = ({ name, image, role }: Props) => {
   return (
-    <div className="text-center">
-      <div className="overflow-hidden rounded-xl shadow-sm">
+    <div className="text-center max-w-xs w-full mx-auto">
+      <div className="relative aspect-square overflow-hidden rounded-xl shadow-sm w-full">
         <Image
           src={image}
           alt={name}
-          width={280}
-          height={280}
-          className="rounded-lg object-cover w-[280px] h-[280px] mx-auto"
+          fill
+          className="object-cover rounded-lg"
+          sizes="(max-width: 768px) 100vw, 280px"
         />
       </div>
       <p className="mt-2 font-semibold">{name}</p>
