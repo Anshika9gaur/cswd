@@ -6,8 +6,8 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 export function MovingCards() {
   return (
     <div className="bg-gradient-to-r from-black to-gray-900 border-t border-gray-700">
-        <h2 className="text-4xl text-center font-bold p-4 text-white">
-        VOICES OF EXPERIENCE
+      <h2 className="text-4xl font-extrabold text-center p-4 mb-6 text-white drop-shadow-lg">
+        Voices of Experience
       </h2>
       {/* First Carousel */}
       <div className="h-[10rem] flex items-center justify-center overflow-hidden">

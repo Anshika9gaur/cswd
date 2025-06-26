@@ -19,9 +19,12 @@ export function NavbarDemo() {
     { name: "Home", link: "/" },
     { name: "Team", link: "/team" },
     { name: "Events", link: "/events" },
+    { name: "Projects", link: "/projects" },
     { name: "About Us", link: "/aboutus" },
     { name: "Gallery", link: "/gallery" },
     { name: "Contact", link: "/contact" },
+
+
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
