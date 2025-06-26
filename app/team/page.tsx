@@ -1,5 +1,10 @@
 import { TeamGroup } from "@/components/TeamGroup";
 
+export const metadata = {
+  title: "Team | CSWD Hackathon",
+  description: "Meet the amazing team behind CSWD who organize and execute impactful tech events.",
+};
+
 const teamData = [
   {
     title: "Technical Team",

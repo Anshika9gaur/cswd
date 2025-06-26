@@ -1,5 +1,10 @@
 import EventCard from "@/components/EventCard";
 
+export const metadata = {
+  title: "Events | CSWD Hackathon",
+  description: "Discover our upcoming hackathons, coding contests, and workshops organized by CSWD MIET.",
+};
+
 export default function EventsPage() {
   return (
     <main>
