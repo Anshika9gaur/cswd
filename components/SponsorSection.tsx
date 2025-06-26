@@ -31,14 +31,14 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut", // use a valid easing string
+      ease: [0.25, 0.1, 0.25, 1], // ✅ Valid cubic-bezier easing
     },
   },
 };
 
 export const SponsorSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-black to-gray-900 border-t border-gray-700 ">
+    <section className="py-20 bg-gradient-to-r from-black to-gray-900 border-t border-gray-700">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-extrabold text-center mb-14 text-white drop-shadow-lg">
           🚀 Our Proud Sponsors
