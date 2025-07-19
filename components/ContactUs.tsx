@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -45,7 +46,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 px-4 py-10">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-black to-gray-900 px-4 py-10">
       <div className="w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
         <h2 className="text-xl sm:text-2xl font-semibold text-center text-gray-800 dark:text-white mb-6">
           Send a Message
@@ -95,9 +96,16 @@ export default function ContactUs() {
             suppressHydrationWarning
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition duration-200 disabled:opacity-60"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition duration-200 disabled:opacity-60 flex items-center justify-center gap-2"
           >
-            {loading ? 'Sending...' : 'Send Message'}
+            {loading ? (
+              <>
+                <ClipLoader color="#ffffff" size={20} />
+                Sending...
+              </>
+            ) : (
+              'Send Message'
+            )}
           </button>
         </form>
       </div>
