@@ -11,12 +11,15 @@ export default function Home() {
   return (
     <>
       <Herosection />
-      <BirthdayBanner children={undefined} />
-      <CardHover />
-      <MovingCards />
-      <HeadSection />
-      <SponsorSection />
-      
+      <BirthdayBanner>
+        <>
+          <CardHover />
+          <MovingCards />
+          <HeadSection />
+          <SponsorSection />
+        </>
+      </BirthdayBanner>
+
     </>
   );
 }
