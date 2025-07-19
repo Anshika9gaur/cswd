@@ -5,8 +5,8 @@ import { HoverEffect } from "./ui/card-hover-effect";
 export function CardHover() {
   return (
     <div
-      className="max-w-5xl mx-auto px-8 bg-gradient-to-r from-black to-gray-900 border-t border-gray-700 "
-      
+      className=" mx-auto px-8 bg-gradient-to-r from-black to-gray-900 border-t border-gray-700 "
+
     >
       {/* <h2 className="text-4xl text-center py-4 font-bold text-white">
         About Us
