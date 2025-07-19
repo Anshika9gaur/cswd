@@ -4,10 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
 
 const teamData = [
   {
