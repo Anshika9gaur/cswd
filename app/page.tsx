@@ -1,4 +1,3 @@
-
 import { Herosection } from "@/components/herosection";
 import { HeadSection } from "@/components/headsection";
 import { CardHover } from "@/components/hover";
@@ -6,19 +5,16 @@ import { MovingCards } from "@/components/movingCard";
 import { SponsorSection } from "@/components/SponsorSection";
 import BirthdayBanner from "@/components/BirthdayBanner";
 
-
 export default function Home() {
   return (
     <>
+
       <Herosection />
-      <BirthdayBanner>
-
-        <CardHover />
-        <MovingCards />
-        <HeadSection />
-        <SponsorSection />
-
-      </BirthdayBanner>
+      <BirthdayBanner children={undefined} />
+      <CardHover />
+      <MovingCards />
+      <HeadSection />
+      <SponsorSection />
 
     </>
   );
