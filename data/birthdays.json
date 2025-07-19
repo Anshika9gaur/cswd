@@ -1,0 +1,33 @@
+[
+  {
+    "name": "PRATYAKSH MITTAL",
+    "dob": "2004-09-27",
+    "photo": "/pratyaksh.jpg"
+  },
+  {
+    "name": "Harshit Verma",
+    "dob": "2006-07-20",
+    "photo": "/harshitVerma.jpg"
+  },
+  {
+    "name": "Samarth Gupta",
+    "dob": "2025-10-03",
+    "photo": "/samarth.jpg"
+  },
+  {
+    "name": "Anushka Singhal",
+    "dob": "2004-06-23",
+    "photo": "/anushka.jpg"
+  },
+  {
+    "name": "Nikhil Pundir",
+    "dob": "2006-03-06",
+    "photo": "/nikhil.jpg"
+  },
+  {
+    "name": "Naitik Kumar",
+    "dob": "2005-07-28",
+    "photo": "/naitik.jpg"
+  }
+]
+

@@ -4,12 +4,14 @@ import { HeadSection } from "@/components/headsection";
 import { CardHover } from "@/components/hover";
 import { MovingCards } from "@/components/movingCard";
 import { SponsorSection } from "@/components/SponsorSection";
+import BirthdayBanner from "@/components/BirthdayBanner";
 
 
 export default function Home() {
   return (
     <>
       <Herosection />
+      <BirthdayBanner children={undefined} />
       <CardHover />
       <MovingCards />
       <HeadSection />
