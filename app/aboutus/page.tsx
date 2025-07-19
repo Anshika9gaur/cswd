@@ -9,36 +9,6 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-const team = [
-  {
-    name: "Nikhil Pundir",
-    role: "MERN Developer",
-    image: "/nikhil.jpg",
-    github: "https://github.com/nikhilpundir108",
-    linkedin: "https://linkedin.com/in/nikhilpundir108",
-  },
-  {
-    name: "Name1",
-    role: "Backend Developer",
-    image: "/hack1.png",
-    github: "https://github.com/riya",
-    linkedin: "https://linkedin.com/in/riya",
-  },
-  {
-    name: "Name2",
-    role: "Organizer",
-    image: "/hack2.png",
-    github: "https://github.com/arjun",
-    linkedin: "https://linkedin.com/in/arjun",
-  },
-  {
-    name: "Name3",
-    role: "Design Lead",
-    image: "/hack3.png",
-    github: "https://github.com/anjali",
-    linkedin: "https://linkedin.com/in/anjali",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -50,7 +20,7 @@ export default function AboutPage() {
         animate="visible"
         className="text-center max-w-3xl mx-auto"
       >
-        <h1 className="text-5xl md:text-6xl font-bold">About CSWD Hackathon</h1>
+        <h1 className="text-5xl md:text-6xl font-bold">About CSWD </h1>
         <p className="mt-6 text-lg md:text-xl text-gray-300">
           A collaborative space for students to innovate, build, and inspire through code.
         </p>
@@ -111,50 +81,7 @@ export default function AboutPage() {
         </div>
       </motion.section>
 
-      {/* Meet the Team */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="py-24 px-4 md:px-12 text-white"
-      >
-        <div className="max-w-6xl mx-auto text-center space-y-10">
-          <h2 className="text-4xl font-bold">Meet Our Team</h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {team.map(({ name, role, image, github, linkedin }, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 0.3 }}
-                className="bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col items-center text-center"
-              >
-                <Image
-                  src={image}
-                  alt={`Photo of ${name}`}
-                  width={300}
-                  height={192}
-                  loading="lazy"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4 space-y-2 w-full">
-                  <h3 className="text-lg font-semibold">{name}</h3>
-                  <p className="text-sm text-gray-400">{role}</p>
-                  <div className="flex justify-center gap-4 mt-2 text-xl text-gray-300">
-                    <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                      <FaGithub className="hover:text-white transition" />
-                    </a>
-                    <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                      <FaLinkedin className="hover:text-white transition" />
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
     </main>
   );
 }
