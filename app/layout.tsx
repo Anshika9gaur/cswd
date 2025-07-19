@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavbarDemo } from "@/components/navbar";
 import Footer from "@/components/footer";
 import BotpressChat from "@/components/BotpressChat";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const geistSans = Geist({
@@ -70,7 +71,7 @@ export default function RootLayout({
         <NavbarDemo />
 
         {children}
-
+        <Analytics />
         <BotpressChat />
         <Footer />
       </body>
