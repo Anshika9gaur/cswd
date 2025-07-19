@@ -36,27 +36,6 @@ const teamData = [
         github: "https://github.com/nikhilpundir108",
         linkedin: "https://linkedin.com/in/nikhilpundir108",
       },
-      {
-        name: "Aryan Singh",
-        image: "/hack1.png",
-        role: "Frontend Developer",
-        github: "https://github.com/aryan",
-        linkedin: "https://linkedin.com/in/aryan",
-      },
-      {
-        name: "Priya Deswal",
-        image: "/hack1.png",
-        role: "Backend Developer",
-        github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108",
-      },
-      {
-        name: "Saurabh Yadav",
-        image: "/hack1.png",
-        role: "DevOps",
-        github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108",
-      },
     ],
   },
   {
@@ -69,18 +48,7 @@ const teamData = [
         github: "https://github.com/harshit",
         linkedin: "https://www.linkedin.com/in/harshit-verma-741863309/",
       },
-      {
-        name: "Manav Raj", image: "/hack1.png", role: "Poster Designer", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108",
-      },
-      {
-        name: "Divya Rawat", image: "/hack1.png", role: "Branding", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108",
-      },
-      {
-        name: "Ritika Sharma", image: "/hack1.png", role: "Illustrator", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108",
-      },
+
     ],
   },
   {
@@ -90,18 +58,7 @@ const teamData = [
         name: "Rohit Sharma", image: "/rohit.jpg", role: "Visuals Head", github: "https://github.com/nikhilpundir108",
         linkedin: "https://linkedin.com/in/nikhilpundir108"
       },
-      {
-        name: "Aman Tiwari", image: "/hack1.png", role: "Video Editor", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Sneha Gupta", image: "/hack1.png", role: "Motion Graphics", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Yash Choudhary", image: "/hack1.png", role: "Production", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
+
     ],
   },
   {
@@ -115,14 +72,7 @@ const teamData = [
         name: "Pratyaksh Mittal", image: "/pratyaksh.jpg", role: "Quality Head", github: "https://github.com/nikhilpundir108",
         linkedin: "https://linkedin.com/in/nikhilpundir108"
       },
-      {
-        name: "Kriti Sharma", image: "/hack1.png", role: "Logistics", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Ankit Yadav", image: "/hack1.png", role: "Ops Coordinator", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
+
     ],
   },
   {
@@ -132,18 +82,7 @@ const teamData = [
         name: "Anushka Singhal", image: "/anushka.jpg", role: "PR Head", github: "https://github.com/nikhilpundir108",
         linkedin: "https://linkedin.com/in/nikhilpundir108"
       },
-      {
-        name: "Tanya Mehta", image: "/hack1.png", role: "Outreach Manager", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Mohit Joshi", image: "/hack1.png", role: "Collab Lead", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Ayesha Khan", image: "/hack1.png", role: "Community Mgr", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
+
     ],
   },
   {
@@ -153,18 +92,7 @@ const teamData = [
         name: "Samarth Gupta", image: "/samarth.jpg", role: "Content Head", github: "https://github.com/nikhilpundir108",
         linkedin: "https://linkedin.com/in/nikhilpundir108"
       },
-      {
-        name: "Ishita Jain", image: "/hack1.png", role: "Social Media", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Raj Mehta", image: "/hack1.png", role: "Writer", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
-      {
-        name: "Neha Kumari", image: "/hack1.png", role: "Reels Editor", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
+
     ],
   },
 ];
