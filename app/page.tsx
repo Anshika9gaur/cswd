@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <Herosection />
       <BirthdayBanner>
-        <>
-          <CardHover />
-          <MovingCards />
-          <HeadSection />
-          <SponsorSection />
-        </>
+
+        <CardHover />
+        <MovingCards />
+        <HeadSection />
+        <SponsorSection />
+
       </BirthdayBanner>
 
     </>
