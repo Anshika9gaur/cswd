@@ -18,23 +18,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata = {
-  title: "CSWD Hackathon 2025",
+  title: "CSWD(MIET) ",
   description: "Official site for CSWD events, hackathons, and more. Register, participate, and stay updated.",
   keywords: ["CSWD", "Hackathon", "Events", "Registration", "Coding", "Tech Fest", "MIET"],
   authors: [{ name: "Nikhil Pundir", url: "https://cswd-olive.vercel.app" }],
   creator: "Nikhil Pundir",
   metadataBase: new URL("https://cswd-olive.vercel.app"),
   openGraph: {
-    title: "CSWD Hackathon 2025",
+    title: "CSWD(MIET) ",
     description: "Join the ultimate student tech showdown hosted by CSWD MIET.",
     url: "https://cswd-olive.vercel.app",
-    siteName: "CSWD",
+    siteName: "CSWD(MIET)",
     images: [
       {
-        url: "/og-banner.png", // Upload the generated image here
+        url: "/cswd_banner.png", // Upload the generated image here
         width: 1200,
         height: 630,
-        alt: "CSWD Hackathon 2025",
+        alt: "CSWD(MIET) 2025",
       },
     ],
     locale: "en_IN",
@@ -42,9 +42,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CSWD Hackathon 2025",
-    description: "Join the ultimate student tech showdown hosted by CSWD MIET.",
-    images: ["/og-banner.png"],
+    title: "CSWD(MIET) 2025",
+    description: "Join the ultimate student tech showdown hosted by CSWD(MIET).",
+    images: ["/cswd_banner.png"],
     creator: "@CSWDMIET",
   },
   icons: {
