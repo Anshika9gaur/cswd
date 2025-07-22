@@ -45,8 +45,8 @@ const teamData = [
         name: "Harshit Verma",
         image: "/harshitVerma.jpg",
         role: "Graphic Head",
-        github: "https://github.com/harshit",
-        linkedin: "https://www.linkedin.com/in/harshit-verma-741863309/",
+        github: "https://github.com/harsxitvrma",
+        linkedin: "https://www.linkedin.com/in/harshit-verma-741863309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
 
     ],
@@ -65,12 +65,12 @@ const teamData = [
     title: "Event Operations",
     members: [
       {
-        name: "Harshit Singh", image: "/harshitSingh.jpg", role: "Event Head", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
+        name: "Harshit Singh", image: "/harshitSingh.jpg", role: "Event Head", github: "https://github.com/harshu7878",
+        linkedin: "https://www.linkedin.com/in/harshit-panchal-n787878-linkdin/"
       },
       {
-        name: "Pratyaksh Mittal", image: "/pratyaksh.jpg", role: "Quality Head", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
+        name: "Pratyaksh Mittal", image: "/pratyaksh.jpg", role: "Quality Head", github: "https://www.linkedin.com/in/pratyaksh-mittal-91b5882b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        linkedin: "https://github.com/Pratyaksh6395/Pratyaksh.git"
       },
 
     ],
@@ -79,8 +79,8 @@ const teamData = [
     title: "Public Relations & Outreach",
     members: [
       {
-        name: "Anushka Singhal", image: "/anushka.jpg", role: "PR Head", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
+        name: "Anushka Singhal", image: "/anushka.jpg", role: "PR Head", github: "https://www.linkedin.com/in/anushka-singhal-7974b7324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        linkedin: "https://linkedin.com/in/"
       },
 
     ],
@@ -89,8 +89,8 @@ const teamData = [
     title: "Social & Content Team",
     members: [
       {
-        name: "Samarth Gupta", image: "/samarth.jpg", role: "Content Head", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
+        name: "Samarth Gupta", image: "/samarth.jpg", role: "Content Head", github: "https://github.com/Samarthgit03",
+        linkedin: "https://www.linkedin.com/in/samarth-gupta-4351a5360"
       },
 
     ],
