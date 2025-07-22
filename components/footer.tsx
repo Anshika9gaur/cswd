@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-blue-300 mb-2">CONTACT US:</h3>
             <p>naitik.kumar.cse.2023@miet.ac.in</p>
-            <p>cswdmiet.society@gmail.com</p>
+            <p>cswd@miet.ac.in</p>
           </div>
           <div>
             <h3 className="text-lg font-bold text-blue-300 mb-2">VISIT US AT:</h3>

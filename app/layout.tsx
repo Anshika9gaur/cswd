@@ -33,7 +33,7 @@ export const metadata = {
     siteName: "CSWD (MIET)",
     images: [
       {
-        url: "/cswd_banner.png", // Upload the generated image here
+        url: "/cswd_banner2.png", // Upload the generated image here
         width: 1453,
         height: 534,
         alt: "CSWD(MIET) 2025",
