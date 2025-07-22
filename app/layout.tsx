@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+<meta name="google-site-verification" content="xTK8JABwr1n-hGudOjNKBzUsEfiICBYLZmK_C2LNFhQ" />
+
 export const metadata = {
   title: "CSWD (MIET) ",
   description: "Official site for CSWD events, hackathons, and more. Register, participate, and stay updated.",
