@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "CSWD (MIET) ",
   description: "Official site for CSWD events, hackathons, and more. Register, participate, and stay updated.",
-  keywords: ["CSWD", "Hackathon", "Events", "Registration", "Coding", "Tech Fest", "MIET"],
+  keywords: ["CSWD", "Hackathon", "Events", "Registration", "Coding", "Tech Fest", "MIET", "CSWD", "MIET CSWD", "CSWD MIET", "MIET", "MIET Meerut", "Web Development Club", "College Tech Club", "Tech Society", "Coding Club MIET", "Hackathon MIET", "MIET Hackathon", "Tech Fest MIET", "MIET Events", "Student Tech Club", "Web Development Society", "Join Tech Club MIET", "Web Development Events", "CSWD Hackathon", "Frontend Development", "Backend Development", "Full Stack Club", "Next.js Club", "React.js Club", "JavaScript Club", "MERN Stack Projects", "College Developer Club", "Open Source Club MIET", "MIET Coding Society", "College Coding Group"],
   authors: [{ name: "Nikhil Pundir", url: "https://cswd-olive.vercel.app" }],
   creator: "Nikhil Pundir",
   metadataBase: new URL("https://cswd-olive.vercel.app"),
