@@ -39,20 +39,6 @@ export function HeadSection() {
     },
     {
       quote:
-        "Rohit Sharma is a visionary creator with a deep understanding of visual storytelling. As Visual Head, he manages media production with clarity and creativity, delivering content that aligns with the team's vision and engages its audience meaningfully.",
-      name: "Rohit Sharma",
-      designation: "Visual Head",
-      src: "/rohit.jpg",
-    },
-    {
-      quote:
-        "Pratyaksh Mittal is a thorough and quality-driven professional who upholds high standards across all outputs. As Quality Manager, he plays a key role in maintaining consistency, accuracy, and excellence in execution.",
-      name: "Pratyaksh Mittal",
-      designation: "Quality Manager",
-      src: "/pratyaksh.jpg",
-    },
-    {
-      quote:
         "Anushka Singhal is a confident and articulate communicator with a flair for building lasting relationships. As PR & Outreach Head, she leads initiatives to enhance the team's external presence and foster meaningful connections.",
       name: "Anushka Singhal",
       designation: "PR & Outreach",
