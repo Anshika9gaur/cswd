@@ -51,16 +51,16 @@ const teamData = [
 
     ],
   },
-  {
-    title: "Visuals Team",
-    members: [
-      {
-        name: "Rohit Sharma", image: "/rohit.jpg", role: "Visuals Head", github: "https://github.com/nikhilpundir108",
-        linkedin: "https://linkedin.com/in/nikhilpundir108"
-      },
+  // {
+  //   title: "Visuals Team",
+  //   members: [
+  //     {
+  //       name: "Rohit Sharma", image: "/rohit.jpg", role: "Visuals Head", github: "https://github.com/nikhilpundir108",
+  //       linkedin: "https://linkedin.com/in/nikhilpundir108"
+  //     },
 
-    ],
-  },
+  //   ],
+  // },
   {
     title: "Event Operations",
     members: [
@@ -68,11 +68,6 @@ const teamData = [
         name: "Harshit Singh", image: "/harshitSingh.jpg", role: "Event Head", github: "https://github.com/harshu7878",
         linkedin: "https://www.linkedin.com/in/harshit-panchal-n787878-linkdin/"
       },
-      {
-        name: "Pratyaksh Mittal", image: "/pratyaksh.jpg", role: "Quality Head", github: "https://www.linkedin.com/in/pratyaksh-mittal-91b5882b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        linkedin: "https://github.com/Pratyaksh6395/Pratyaksh.git"
-      },
-
     ],
   },
   {
