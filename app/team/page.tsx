@@ -51,16 +51,6 @@ const teamData = [
 
     ],
   },
-  // {
-  //   title: "Visuals Team",
-  //   members: [
-  //     {
-  //       name: "Rohit Sharma", image: "/rohit.jpg", role: "Visuals Head", github: "https://github.com/nikhilpundir108",
-  //       linkedin: "https://linkedin.com/in/nikhilpundir108"
-  //     },
-
-  //   ],
-  // },
   {
     title: "Event Operations",
     members: [
