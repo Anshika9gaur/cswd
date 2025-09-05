@@ -46,7 +46,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-black to-gray-900 px-4 py-10">
+    <section className="min-h-screen flex items-center justify-center bg-sky px-4 py-10">
       <div className="w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
         <h2 className="text-xl sm:text-2xl font-semibold text-center text-gray-800 dark:text-white mb-6">
           Send a Message

@@ -38,7 +38,7 @@ const projects = [
 
 export const ProjectSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-black to-gray-900">
+    <section className="py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-black dark:text-white">
           🚧 Our Projects

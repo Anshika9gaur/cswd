@@ -5,7 +5,7 @@ import { HoverEffect } from "./ui/card-hover-effect";
 export function CardHover() {
   return (
     <div
-      className=" mx-auto px-8 bg-gradient-to-r from-black to-gray-900 border-t border-gray-700 "
+      className=" mx-auto px-8 bg-white border-t border-gray-700 "
 
     >
       {/* <h2 className="text-4xl text-center py-4 font-bold text-white">

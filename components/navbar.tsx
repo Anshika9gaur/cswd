@@ -30,7 +30,7 @@ export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
+    <div className="sticky top-0 z-50 w-full bg-white/30 backdrop-blur-md border-b-2 border-gray-300">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>

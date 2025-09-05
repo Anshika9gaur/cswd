@@ -54,8 +54,8 @@ export function HeadSection() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-black to-gray-900 py-10 border-t border-gray-700">
-      <h2 className="text-4xl font-extrabold text-center mb-6 text-white drop-shadow-lg">
+    <div className="bg-white py-10 border-t border-gray-700">
+      <h2 className="text-4xl font-extrabold text-center mb-6 text-blue drop-shadow-lg">
         Meet our Leaders
       </h2>
       <AnimatedTestimonials testimonials={testimonials} />
