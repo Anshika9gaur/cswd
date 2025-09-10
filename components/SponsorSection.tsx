@@ -40,7 +40,7 @@ export const SponsorSection = () => {
   return (
     <section className="py-20 bg-gray-100 border-t border-gray-700">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-extrabold text-center mb-14 text-blue drop-shadow-lg">
+        <h2 className="text-4xl font-extrabold text-center mb-14 text-blue drop-shadow-md">
           🚀 Our Proud Sponsors
         </h2>
 

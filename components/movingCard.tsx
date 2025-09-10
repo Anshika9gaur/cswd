@@ -5,8 +5,8 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export function MovingCards() {
   return (
-    <section className="bg-gradient-to-r from-black to-gray-900 border-t border-gray-700 px-4 py-10">
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-8">
+    <section className="bg-gradient-to-b from-white to-sky border-t border-gray-700 px-4 py-10">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-blue mb-8">
         VOICES OF EXPERIENCE
       </h2>
 

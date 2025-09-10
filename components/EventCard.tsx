@@ -26,7 +26,7 @@ export default function EventCard({
   imageOnLeft = false,
 }: EventCardProps) {
   return (
-    <section className="bg-gradient-to-r from-black to-gray-900 text-white py-16">
+    <section className="bg-white text-white py-16">
       <div
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col ${
           imageOnLeft ? "md:flex-row-reverse" : "md:flex-row"
@@ -35,7 +35,7 @@ export default function EventCard({
         {/* Left: Text */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-violet-500">{title}</h1>
-          <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-black leading-relaxed">
             {description}
           </p>
           {buttonLabel && buttonLink && (

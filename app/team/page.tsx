@@ -84,7 +84,7 @@ const teamData = [
 
 export default function TeamPage() {
   return (
-    <main className="min-h-screen  bg-gradient-to-r from-black to-gray-900 text-white px-4 py-12">
+    <main className="min-h-screen  bg-white text-blue px-4 py-12">
       <h1 className="text-3xl font-bold text-center mb-10">
         THE MINDS BEHIND THE MISSION
       </h1>
@@ -101,7 +101,7 @@ export default function TeamPage() {
                 key={index}
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="bg-gray-800 rounded-xl overflow-hidden shadow-lg text-center"
+                className="bg-gradient-to-b from-black to-gray-700 rounded-xl overflow-hidden shadow-lg text-center"
               >
                 <Image
                   src={member.image}
@@ -111,7 +111,7 @@ export default function TeamPage() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4 space-y-2">
-                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                  <h3 className="text-lg text-white font-semibold">{member.name}</h3>
                   {member.role && (
                     <p className="text-sm text-gray-400">{member.role}</p>
                   )}
